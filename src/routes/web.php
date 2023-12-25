@@ -27,4 +27,9 @@ Route::prefix("/blog")->name("blog.")->controller(BlogController::class)->group(
         'slug' => "[a-z0-9/-]+",
         'id' => "[0-9]+"
     ])->name('show');
+// route get post with slug
+ /*   Route::get("/{post:slug}", 'show')->where([
+        'post' => "[a-z0-9/-]+",
+
+    ])->name('show');*/
 });
