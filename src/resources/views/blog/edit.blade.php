@@ -1,5 +1,5 @@
 @extends('base')
-@section('title', 'Cree un article')
+@section('title', 'edit un article')
 
 @section('content')
     @include('blog.form')

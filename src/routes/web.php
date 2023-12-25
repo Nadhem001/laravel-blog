@@ -30,7 +30,8 @@ Route::prefix("/blog")->name("blog.")->controller(BlogController::class)->group(
 
     Route::get('/new','create')->name('create');
     Route::post('/new','store')->name('store');
-
+    Route::get('/{post}/edit','edit')->name('edit');
+    Route::patch('/{post}/edit','update');
 
     // route get post with slug
     /*   Route::get("/{post:slug}", 'show')->where([
