@@ -7,6 +7,14 @@
     @foreach ($posts as $post)
         <article>
             <h2>{{$post->title}}</h2>
+            <p class="small">Categorie : {{ $post->category?->name }}
+            @if (!$post->tags->isEmpty())
+            ,
+                @foreach ($post->tags as $tag)
+                    <span class="badge bg-secondary">{{ $tag->name }}</span>
+                @endforeach
+            @endif
+        </p>
             <p>
                 {{$post->content}}
             </p>
