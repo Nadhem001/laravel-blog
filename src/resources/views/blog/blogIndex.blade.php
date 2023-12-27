@@ -15,6 +15,10 @@
                 @endforeach
             @endif
         </p>
+        @if ($post->image)
+
+            <img  alt="" src="{{ $post->imageUrl()}}" />
+        @endif
             <p>
                 {{$post->content}}
             </p>
